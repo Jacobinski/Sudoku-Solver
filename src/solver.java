@@ -5,7 +5,7 @@ public class solver{
   private static final int NUM_COLS = 9;
 
   // Returns a completed puzzle
-  public static void solver(int[][] puzzleInput){
+  public void solver(int[][] puzzleInput){
 
     int[][] puzzle = new int[NUM_ROWS][NUM_COLS]; //Make a deep copy of puzzleInput when populating validNumbers
     tile validNumbers[][] = new tile[NUM_ROWS][NUM_COLS]; // This will be the valid number array to keep track of possibilities
@@ -78,8 +78,8 @@ public class solver{
     }
 
     for (int i=minRow;i<=maxRow;i++){
-      for (int j=minColumn;j<=maxColumn,j++){
-        validNumers[i][j].remove(found);
+      for (int j=minColumn;j<=maxColumn;j++){
+        validNumbers[i][j].remove(found);
       }
     }
   }
