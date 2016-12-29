@@ -11,7 +11,7 @@ public class tile{
     for (int i=1;i<=9;i++){numbers.add(i);}
   }
 
-  public int getSize(){
+  public int size(){
     return size;
   }
 
@@ -43,11 +43,12 @@ public class tile{
   }
 
   /*Call this only when getSize() == 1*/
-  public int lastNumber() throws Exception{
-    if(this.getSize() == 1){
+  // HACK: This should really throw an exception
+  public int lastNumber(){
+    if(this.size() == 1){
       return numbers.get(0);
     }else{
-      throw new Exception("Called lastNumber when size>1");
+      return 99; 
     }
   }
 
